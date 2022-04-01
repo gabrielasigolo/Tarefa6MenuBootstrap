@@ -27,3 +27,48 @@
 .carousel-caption, .d-none, .d-md-block p{
     font-size: 19px;
 }
+
+#title{
+    text-align: center;
+}
+
+.container{
+    text-align: center;
+    margin-top: 70px;
+}
+
+.container h2{
+    font-size: 40px;
+}
+
+.card-img-top{
+    width: 220px; 
+    height: 300px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.cards{
+    display: flex;
+    justify-content: center;
+}
+
+.um,
+.dois{
+    margin-right: 40px;   
+}
+
+.quantity{
+    width: 8px;
+    height: 10px;
+    border: none;
+}
+
+.cart-qty-minus{
+    margin-right: 40px;
+}
+
+.quantity{
+    margin-right: 40px;
+}
