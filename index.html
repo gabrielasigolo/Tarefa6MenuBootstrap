@@ -94,7 +94,7 @@
         <h2>Prato Principal</h2>
         <p>Todos os pratos acompanham arroz, feijão e sobre do dia</p>
         <div class="cards">
-          <div class="card um" style="width: 15rem; height: 32rem">
+          <div class="card um" style="width: 15rem; height: 30rem">
             <img src="/img/coxa_de_frango.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Coxa de Frango Crocante</h5>
@@ -107,26 +107,121 @@
             </div>
           </div>
   
-          <div class="card dois" style="width: 15rem; height: 28rem">
+          <div class="card dois" style="width: 15rem; height: 30rem">
             <img src="/img/quesadilhas.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Quesadilhas</h5>
               <p class="card-text">R$ 30,00</p>
-              <!-- Increment e decrement -->
+              <div class="counter">
+                <button class="cart-qty-minus">-</button>
+                <input class="quantity qty" value="0" id="1" name="qty"></input>
+                <button class="cart-qty-plus">+</button>
+              </div>
             </div>
           </div>
   
-          <div class="card" style="width: 15rem; height: 28rem">
+          <div class="card" style="width: 15rem; height: 30rem">
             <img src="/img/parmegiana.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Parmegiana</h5>
               <p class="card-text">R$ 40,00</p>
-              <!-- Increment e decrement -->
+              <div class="counter">
+                <button class="cart-qty-minus">-</button>
+                <input class="quantity qty" value="0" id="1" name="qty"></input>
+                <button class="cart-qty-plus">+</button>
+              </div>
             </div>
         </div>
         </div>
       </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <div class="container acompanhamentos">
+        <h2>Prato Principal</h2>
+        <p>Todos os pratos acompanham arroz, feijão e sobre do dia</p>
+        <div class="cards">
+          <div class="card um" style="width: 15rem; height: 30rem">
+            <img src="/img/barbecue-caseiro.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Barbecue Caseiro</h5>
+              <p class="card-text">R$ 10,00</p>
+              <div class="counter">
+                <button class="cart-qty-minus">-</button>
+                <input class="quantity qty" value="0" id="1" name="qty"></input>
+                <button class="cart-qty-plus">+</button>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card dois" style="width: 15rem; height: 30rem">
+            <img src="/img/guacamole.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Guacamole</h5>
+              <p class="card-text">R$ 20,00</p>
+              <div class="counter">
+                <button class="cart-qty-minus">-</button>
+                <input class="quantity qty" value="0" id="1" name="qty"></input>
+                <button class="cart-qty-plus">+</button>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card" style="width: 15rem; height: 30rem">
+            <img src="/img/batatas.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Batatas chips</h5>
+              <p class="card-text">R$ 15,00</p>
+              <div class="counter">
+                <button class="cart-qty-minus">-</button>
+                <input class="quantity qty" value="0" id="1" name="qty"></input>
+                <button class="cart-qty-plus">+</button>
+              </div>
+            </div>
+        </div>
+        </div>
+      </div>
+
+        
+          <div class="container mb-5">
+            <div id="dados">
+              <h2>Dados Pessoais</h2>
+            </div>
+            <div class="col-8 offset-2">
+              <form>
+                <div class="form-group">
+                  <label for="inputNome">Nome:</label>
+                  <input type="text" class="form-control" id="inputNome" placeholder="Digite seu nome:">
+                </div>
+        
+                <div class="row">
+        
+                  <div class="col-12 col-lg-6">
+                    <div class="form-group mt-3">
+                      <label for="inputTelefone">Telefone:</label>
+                      <input type="telefone" class="form-control" id="inputTelefone" placeholder="Telefone">
+                    </div>
+                  </div>
+        
+                  <div class="col-12 col-lg-6">
+                    <div class="form-group mt-3">
+                      <label for="inputEmail">Email</label>
+                      <input type="text" id="email" class="form-control" id="inputEmail" placeholder="Email">
+                    </div>
+                  </div>
+                </div>
+        
+              </form>
+            </div>
+          </div>
+
+          <div id="calc-btn">
+            <button type="button" class="btn btn-primary" onclick="Calc()">Calcular</button>
+          </div>
+    
 </body>
+
+    <script src="/jquery-3.6.0.min.js"></script>
+    <script src="/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+     
+
 </html>

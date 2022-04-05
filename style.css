@@ -60,15 +60,55 @@
 }
 
 .quantity{
-    width: 8px;
-    height: 10px;
+    width: 13px;
+    height: 13px;
     border: none;
 }
 
-.cart-qty-minus{
-    margin-right: 40px;
+.cart-qty-minus,
+.cart-qty-plus{
+    border: 0.1px solid rgb(211, 206, 206);
+    background-color: #ffffff;
 }
 
-.quantity{
-    margin-right: 40px;
+.card-body{
+    padding-bottom: 20px;
 }
+
+.card {
+    border: none;
+    box-shadow: 3px 10px 15px 5px rgba(0,0,0,0.05);
+}
+
+
+.mb-5{
+    text-align: left;
+    margin-top: 40px;
+    border: none;
+    box-shadow: 3px 10px 15px 5px rgba(0,0,0,0.05);
+    width: 950px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+}
+
+#dados h2{
+    margin-left: 50px;
+    margin-bottom: 20px;
+    font-weight: lighter;
+}
+
+.col-8{
+    margin-left: auto;
+    margin-right: auto;
+    width: 89%;
+}
+#calc-btn{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+
+
+
