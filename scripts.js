@@ -21,7 +21,10 @@ var incrementMinus = buttonMinus.click(function() {
 });
 
 function Calc() {
-    
+    var modal_body = document.getElementsByClassName('modal-body');
+	var counter = $(".quantity");
+
+	
 }
 
 /*var counter = $(".quantity");
