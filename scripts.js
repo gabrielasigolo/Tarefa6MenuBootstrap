@@ -20,17 +20,63 @@ var incrementMinus = buttonMinus.click(function() {
 	}
 });
 
-function Calc() {
-    var modal_body = document.getElementsByClassName('modal-body');
-	var counter = $(".quantity");
+var modal_body = document.getElementById('modal-body');
 
+function Calc() {
 	
+	modal_body.innerHTML = `<br>Caro(a) <strong>${document.getElementById('inputNome').value}</strong><br>
+                        Seguem os dados do seu pedido.<br>
+                        
+                       O seu pedido é:<br><br>`;
+						showData();
+
 }
 
-/*var counter = $(".quantity");
+var prods = [
+    { id: 1, name: 'Coxa de Frango Crocante', price: 25},
+    { id: 2, name: 'Quesadilhas', price: 30},
+    { id: 3, name: 'Parmegiana', price: 40},
+    { id: 4, name: 'Barbecue Caseiro', price: 10},
+    { id: 5, name: 'Guacamole', price: 20},
+    { id: 6, name: 'Batatas Chips', price: 15},
+]
 
-    for(var i = 0; i <= counter.length; i++){
-        if(counter[i] == 0){
+function showData() {
+    var quantities = document.getElementsByName('qty');
+    var formatter = new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+    });
+    var soma = 0;
+	var naoZerados = 0;
 
-        }
-    }*/
+    for(let input of quantities){
+        if(input.value > 0){
+			var mult = input.value * prods[input.id-1].price;
+            modal_body.innerHTML += `<li>Prato: ${prods[input.id-1].name} - Preço unitário: ${formatter.format(prods[input.id-1].price)} - Quantidade: ${input.value} - Total: ${formatter.format(mult)}</li>`;
+            soma += mult;
+			naoZerados++;
+        } 
+    } 
+
+	if(naoZerados == 0){
+		modal_body.style.color = 'Red';
+		modal_body.style.textAlign = 'center';
+
+		modal_body.innerHTML = '<h3>Selecione pelo menos um prato.</h3>'
+
+		return
+	} else {
+		modal_body.style.color = 'Black';
+		modal_body.style.textAlign = 'left';
+	}
+	
+	
+	modal_body.style.marginLeft = '20px';
+    var total = document.createElement('h3');
+    total.innerHTML = `<br>Preço final ${formatter.format(soma)}<br>`;
+    modal_body.appendChild(total);
+    
+
+    return;
+}
